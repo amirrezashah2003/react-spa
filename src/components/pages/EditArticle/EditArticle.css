@@ -1,0 +1,26 @@
+.edit-article form{
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+}
+.edit-article form input{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.edit-article form button{
+    background-color: rgb(2, 107, 244);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+
+.edit-article form input:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px lightgray ;
+    border: 1px solid gray;
+}

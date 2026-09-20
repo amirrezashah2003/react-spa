@@ -1,0 +1,8 @@
+#root{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.section{
+    margin-top: 100px;
+}

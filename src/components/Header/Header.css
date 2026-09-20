@@ -1,0 +1,54 @@
+header{
+    padding: 30px 0;
+    background-color: aqua;
+}
+header h2{
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+header nav ul{
+    margin-bottom: 0;
+}
+header nav ul li{
+    color: rgb(114, 114, 114);
+}
+
+header nav ul li .active{
+    color: black !important;
+    border-bottom: 3px solid black;
+}
+
+.offcanvas{
+    width: 300px !important;
+}
+ 
+
+.offcanvas .offcanvas-header{
+    display: grid;
+    grid-template-columns: 4fr  1fr;
+}
+.offcanvas .offcanvas-header div{
+    text-align: center;
+    margin-right: 30px;
+}
+
+.offcanvas ul{
+    padding: 0;
+}
+
+
+
+.offcanvas nav ul li{
+    color: rgb(114, 114, 114);
+}
+.offcanvas nav ul li .active{
+    color: black !important;
+    border-bottom: 3px solid black !important;
+}
+
+
+.offcanvas .offcanvas-header button:focus{
+    box-shadow: none;
+}

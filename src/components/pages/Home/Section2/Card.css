@@ -1,0 +1,13 @@
+.course-card-container img{
+    width: 100%; 
+
+    object-fit: cover;
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card{
+    height: 357px !important ;
+  }
+}

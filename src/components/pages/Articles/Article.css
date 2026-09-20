@@ -1,0 +1,31 @@
+.article .card{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px lightgray;
+    padding: 20px 30px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 40px;
+}
+.article .card h2{
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+    top: -30px;
+    
+}
+
+.article .card img{
+    position: relative;
+    top: -50px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px){
+    .article .card{
+        position: sticky;
+        top: 50px;
+    }
+}

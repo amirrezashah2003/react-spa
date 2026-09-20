@@ -1,0 +1,105 @@
+/* ==================== Vazirmatn Font-Face Definitions ==================== */
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('./assets/fonts/Vazirmatn-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Vazirmatn" , sans-serif;
+}
+#root{
+  min-height: 100vh !important;
+}
+a{
+  color: inherit !important;
+  text-decoration: none !important;
+}
+li{
+  list-style-type: none !important;
+}
+
+button{
+  all: unset;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 100% !important;
+        padding: 0 30px !important;
+    }
+}
+
+p{
+  text-align: justify !important;
+}
