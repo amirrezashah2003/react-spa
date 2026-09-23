@@ -1,0 +1,19 @@
+@media (max-width: 575.98px) {
+    .skeletion-course .image{
+        height: 210px !important;
+    }
+    .skeletion-course .info{
+        width: 100% !important;
+    }
+}
+
+/* فقط برای صفحاتی که بین 576px تا 767px هستند (حالت SM) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .skeletion-course .image{
+        height: 294px !important;
+    }
+    .skeletion-course .info{
+        width: 80% !important;
+    }
+}
+

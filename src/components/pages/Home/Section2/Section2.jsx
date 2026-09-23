@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import CourseCard from "./Card.jsx"
 import { useCourses } from "../../../hooks/queries/useCourseQuery.js"
+import CourseCardSkeleton from "../../../CourseCardSkeleton/CourseCardSkeleton.jsx"
 
 function Section2(){
     const {data: courses , isLoading , isError} = useCourses()
@@ -13,14 +14,18 @@ function Section2(){
                 <h2>دوره های آموزشی</h2>
                 <Row className="gy-4">
                     {
-                        isLoading ? (<h2 className="text-center">در حال بارگیری...</h2>) : isError ? (
-                            Array.from({ length: 4 }).map((_, index) => (
-                                <Col key={index} xs={12} md={6} lg={3}>
-                                    <div className="content">
-                                        <h4 className="text-center text-danger">خطا در دریافت اطلاعات</h4>
-                                    </div>
+                        isLoading ? (
+                            [1,2,3,4].map( n => (
+                                <Col key={n} xs={12} md={6} lg={3}>
+                                    <CourseCardSkeleton />
                                 </Col>
                             ))
+                        ) :
+                        isError ? (
+                            <div className="text-center w-100 p-5">
+                                <p className="text-danger">خطا در دریافت اطلاعات. لطفا دوباره تلاش کنید.</p>
+                            </div>
+                        
                         ) : (
                             courses.map(course => (
                                 <Col key={course.id} xs={12} md={6} lg={3}>

@@ -1,10 +1,11 @@
-import "./Section1.css"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import { useHomeImage } from "../../../hooks/queries/useImageQuery.js"
+import Skeleton from 'react-loading-skeleton';
+import "./Section1.css"
 function Section1(){
-    const {data: image} = useHomeImage()
+    const {data: image , isLoading} = useHomeImage()
     return (
         <section className="section1">
             <Container>
@@ -17,7 +18,19 @@ function Section1(){
                     </Col>
                     <Col xs={12} lg={6}>
                         <div className="content">
-                            <img className="img-fluid" src={image} alt="" />
+                            {isLoading ? (
+                                <Skeleton 
+                                    containerClassName="skeleton-img-container"
+                                    className="skeleton-img"
+                                    style={{ 
+                                        aspectRatio: '654 / 436', 
+                                        width: '100%', 
+                                         
+                                    }} 
+                                />
+                            ) : (
+                                <img className="img-fluid sec1-img" src={image} alt="" />
+                            )}
                         </div>
                     </Col>
                 </Row>

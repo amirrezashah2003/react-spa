@@ -40,21 +40,27 @@ function Comments(){
                     )}
                 </Row>
                 
-                <ReactPaginate
-                    pageCount={totalPages}
-                    onPageChange={changePageHandler}
-                    breakLabel="..."
-                    nextLabel= {<FaArrowRightLong size={26} />} 
-                    pageRangeDisplayed={3}
-                    marginPagesDisplayed={2} 
-                    previousLabel= {<FaArrowLeftLong size={26} />}
-                    className="pagination"
-                    activeLinkClassName="active-link"
-                    forcePage={page - 1} // صفحه جاری (چون این کتابخانه از 0 شروع می‌کند)
-
-                />
             </Container>
                     
+            <Container>
+                {
+                    totalPages > 0 && (
+                        <ReactPaginate
+                            pageCount={totalPages}
+                            onPageChange={changePageHandler}
+                            breakLabel="..."
+                            nextLabel= {<FaArrowRightLong size={26} />} 
+                            pageRangeDisplayed={3}
+                            marginPagesDisplayed={2} 
+                            previousLabel= {<FaArrowLeftLong size={26} />}
+                            className="pagination"
+                            activeLinkClassName="active-link"
+                            forcePage={page - 1} // صفحه جاری (چون این کتابخانه از 0 شروع می‌کند)
+        
+                        />
+                    )
+                }
+            </Container>
         </section>
         <Footer />
         </>

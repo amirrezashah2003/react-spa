@@ -1,3 +1,22 @@
 .section1{
     margin: 50px auto;
 }
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* کمی از پایین به بالا می‌آید که جذاب‌تر شود */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.section1 .sec1-img{
+    animation: fadeIn 0.5s ease-out forwards;
+}
