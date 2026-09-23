@@ -67,13 +67,13 @@
   ],
   "blogs": [
     {
-      "id": "1",
-      "image": "https://dl.next1code.ir/images/react/article1.webp",
       "title": "هوش مصنوعی و کاربرد های آن",
       "info": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
       "writer": "امیررضا شاه‌محمدی",
-      "time": 11,
-      "category": "هوش مصنوعی"
+      "category": "هوش مصنوعی",
+      "image": "https://dl.next1code.ir/images/react/article1.webp",
+      "time": "12",
+      "id": "1"
     },
     {
       "id": "2",
@@ -139,13 +139,13 @@
       "category": "برنامه نویسی"
     },
     {
-      "title": "گیت و گیت هاب چیست؟",
-      "info": "ز حوادث پاریس، برایان میلز یک بار دیگر مجبور می‌شود تا برای نجات جان",
+      "title": "تیلویند سی اس اس و کاربردهایش",
+      "info": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
       "writer": "امیررضا پرموزه",
       "category": "تکنولوژی",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSDvjFEGbaztiRC6gg6NV3V42luODMwh6WaTUagTrbV5FpfzqQouf7oqU&s=10",
-      "time": "13",
-      "id": "McZt3iilrJs"
+      "time": "7",
+      "id": "IgJS0frJkLE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

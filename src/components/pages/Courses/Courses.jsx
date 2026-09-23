@@ -7,10 +7,14 @@ import Col from "react-bootstrap/Col"
 import "./Courses.css"
 import { useCourse } from "../../hooks/queries/useCourseQuery.js"
 import CoursePageSkeleton from "../../Skeleton/CoursePageSkeleton/CoursePageSkeleton.jsx"
+import { useEffect } from "react"
 
 function Courses(){
     const { courseId } = useParams()
     const {data:course , isLoading , isError} = useCourse(courseId)
+    useEffect(() => {
+        window.scrollTo(0 ,0)
+    } , [courseId])
 
     return(
         <>

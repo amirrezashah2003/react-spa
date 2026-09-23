@@ -1,4 +1,4 @@
-.article .card{
+.article-skeleton{
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 15px lightgray;
@@ -7,14 +7,7 @@
     margin: auto;
     margin-top: 40px;
 }
-.article .card h2{
-    font-size: 22px;
-    text-align: center;
-    position: relative;
-    top: -30px;
-}
-
-.article .card img{
+.article-skeleton .img{
     position: relative;
     top: -50px;
     border-radius: 10px;
@@ -22,8 +15,23 @@
     margin: 0 auto;
 }
 
+.article-skeleton .title{
+    text-align: center;
+    position: relative;
+    top: -60px;
+}
+.article-skeleton .para{
+    position: relative;
+    top: -30px;
+    margin-bottom: 8px;
+    
+}
+.article-skeleton .button{
+    position: relative;
+    top: -10px;
+}
 @media (min-width: 992px){
-    .article .card{
+    .article-skeleton{
         position: sticky;
         top: 50px;
     }

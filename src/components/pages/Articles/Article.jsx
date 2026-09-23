@@ -3,8 +3,7 @@ import Footer from "../../Footer/Footer"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import axios from "axios"
-import { useState , useEffect } from "react"
+import { useEffect } from "react"
 import "./Article.css"
 import Swal from 'sweetalert2'
 import { FaTrash } from "react-icons/fa";
@@ -15,13 +14,16 @@ import Button from "react-bootstrap/esm/Button"
 import { useNavigate , Link , useParams , Outlet, useLocation } from "react-router-dom"
 import { useArticle } from "../../hooks/queries/useArticleQueries"
 import { useDeleteArticle } from "../../hooks/mutations/useArticleMutations.js"
-import Spinner from "react-bootstrap/Spinner"
+import ArticlePageSkeleton from "../../Skeleton/ArticlePageSkeleton/ArticlePageSkeleton.jsx"
 
 function Article(){
     const location = useLocation();
     const isEditPage = location.pathname.includes("/edit");
     const navigate = useNavigate();
     const{ blogId } = useParams()
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    } , [blogId])
 
 
 
@@ -50,7 +52,6 @@ function Article(){
                         }, 2000);
                     },
                     onError: () => {
-                        // اگر در mutationFn خطایی رخ دهد، این اجرا می‌شود
                         Swal.fire({
                             icon: "error",
                             text: "خطایی رخ داده است",
@@ -65,11 +66,9 @@ function Article(){
     if (isLoading) {
         return (
             <>
-                <Header />
-                <div className="d-flex justify-content-center align-items-center" style={{ height: '50vh' }}>
-                    <Spinner animation="border" variant="primary" />
-                </div>
-                <Footer />
+            <Header />
+            <ArticlePageSkeleton /> 
+            <Footer />
             </>
         );
     }
@@ -86,7 +85,7 @@ function Article(){
     }
     
     return(
-        <>
+        <> 
         <Header />
         {!isEditPage && (
             <section className="article">
