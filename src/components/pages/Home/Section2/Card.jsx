@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import "./Card.css"
 
-function CourseCard({id , image , title , info}) {
+function CourseCard({id , image , title , info , animated}) {
   return (
-    <Card className='course-card-container'>
+    <Card className={`course-card-container ${animated ? "course-animation" : ""}`}>
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>

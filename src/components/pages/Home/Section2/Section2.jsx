@@ -4,10 +4,11 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import CourseCard from "./Card.jsx"
 import { useCourses } from "../../../hooks/queries/useCourseQuery.js"
-import CourseCardSkeleton from "../../../CourseCardSkeleton/CourseCardSkeleton.jsx"
+import CourseCardSkeleton from "../../../Skeleton/CourseCardSkeleton/CourseCardSkeleton.jsx"
 
 function Section2(){
-    const {data: courses , isLoading , isError} = useCourses()
+    const {data: courses , isLoading , isError , isFetching} = useCourses()
+    const shoudAnimated = isLoading || isFetching
     return (
         <section className="section2">
             <Container  className="custom-fluid-lg">
@@ -29,7 +30,7 @@ function Section2(){
                         ) : (
                             courses.map(course => (
                                 <Col key={course.id} xs={12} md={6} lg={3}>
-                                    <CourseCard {...course} />
+                                    <CourseCard {...course} animated={shoudAnimated} />
                                 </Col>
                             ))
                         )

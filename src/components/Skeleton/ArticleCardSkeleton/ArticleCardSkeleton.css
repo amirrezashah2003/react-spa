@@ -1,0 +1,10 @@
+.blog-card-skeleton{
+    padding: 0;
+    border: none !important;
+}
+.blog-card-skeleton .card-footer{
+    border: none;
+}
+.blog-card-skeleton .card-body{
+    padding: 0 16px 16px 16px;
+}

@@ -1,9 +1,10 @@
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft , FaRegClock } from "react-icons/fa";
-function BlogCard({id , image , title , info , writer , time}){
+import "./BlogCard.css"
+function BlogCard({id , image , title , info , writer , time , animated}){
     return(
-    <Card className='blog-card h-100'>
+    <Card className={`blog-card ${animated ? "blog-animation" : ""} h-100`}>
         <Card.Img variant="top" src={image} alt="course" />
         <Card.Body>
             <Card.Title>{title}</Card.Title>

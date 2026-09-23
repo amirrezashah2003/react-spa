@@ -11,17 +11,19 @@ const ReactPaginate = ReactPaginateModule.default.default
 import { FaArrowLeftLong , FaArrowRightLong } from "react-icons/fa6";
 import { useState } from "react"
 import { useComments } from "../../hooks/queries/useImageQuery"
+import CommentSkeleton from "../../Skeleton/CommentSkeleton/CommentSkeleton"
 
 
 function Comments(){
     const [page ,setPage] = useState(1)
     const { data , total } = useComments(page)
-    const { data: comments, isLoading, isError, error } = useComments(page);
+    const { data: comments, isLoading, isError, error , isFetching } = useComments(page);
     // فرض بر این است که API شما یک آبجکت شامل { data, total } برمی‌گرداند
     const totalPages = comments ? Math.ceil(comments.total / 12) : 0;
     const changePageHandler = (e) => {
         setPage(e.selected + 1)
     }
+    const shoudAnimated = isLoading || isFetching
 
     return(
         <>
@@ -29,12 +31,18 @@ function Comments(){
         <section className="comments">
             <Container>
                 <Row className="gy-3">
-                    {isLoading && <Loading /> }
+                    {isLoading && (
+                        Array.from({ length: 12 }).map( (_,index) => (
+                            <Col key={index} sm={6} md={6} lg={4} xl={3}>
+                                <CommentSkeleton />
+                            </Col>
+                        ))
+                    ) }
                     {isError && <h2>{error.message}</h2>}
                     {!isLoading && !isError && 
                         comments.data?.map(comment => (
                             <Col key={comment.id} sm={6} md={6} lg={4} xl={3}>
-                                <Comment {...comment} />
+                                <Comment {...comment} animated={shoudAnimated} />
                             </Col>
                         )
                     )}

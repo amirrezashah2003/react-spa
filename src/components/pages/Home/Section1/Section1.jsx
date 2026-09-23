@@ -5,7 +5,7 @@ import { useHomeImage } from "../../../hooks/queries/useImageQuery.js"
 import Skeleton from 'react-loading-skeleton';
 import "./Section1.css"
 function Section1(){
-    const {data: image , isLoading} = useHomeImage()
+    const {data: image , isLoading , isFetching} = useHomeImage()
     return (
         <section className="section1">
             <Container>
@@ -29,7 +29,7 @@ function Section1(){
                                     }} 
                                 />
                             ) : (
-                                <img className="img-fluid sec1-img" src={image} alt="" />
+                                <img className={`img-fluid ${isFetching ? "sec1-img" : ""}`} src={image} alt="" />
                             )}
                         </div>
                     </Col>
